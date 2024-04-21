@@ -143,7 +143,7 @@
 
 
     <!-- Services Start -->
-    <div class="container-fluid pt-5" id="service">
+    {{-- <div class="container-fluid pt-5" id="service">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
@@ -161,12 +161,12 @@
             @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Services End -->
 
 
     <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
+    {{-- <div class="container-fluid pt-5 pb-3" id="portfolio">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
@@ -200,7 +200,7 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Portfolio End -->
 
 

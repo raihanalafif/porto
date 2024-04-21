@@ -39,20 +39,20 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
+        // dd(request()->file('image'));
         $validated = $request->validate([
             'name' => 'required|min:4',
             'job' => 'required',
             'description' => 'required|min:10|max:255',
             'image' => 'image|mimes:jpeg,png,jpg|max:2048'
         ]);
-
         $review = new Review();
         $review->name = $validated['name'];
         $review->job = $validated['job'];
         $review->description = $validated['description'];
 
         if($request->hasfile('image')){
-            $get_file = $request->file('image')->store('images/reviewers');
+            $get_file = $request->file('image')->store('images/reviewers', 'public');
             $review->image = $get_file;
         }
 
@@ -94,7 +94,7 @@ class ReviewController extends Controller
             if($review->image != null ){
             Storage::delete($review->image);
             }
-            $get_new_file = $request->file('image')->store('images/reviewers');
+            $get_new_file = $request->file('image')->store('images/reviewers', 'public');
             $review->image = $get_new_file;
         }
 
